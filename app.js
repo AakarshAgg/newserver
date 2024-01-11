@@ -11,12 +11,12 @@ app.use(express.json()); // built-in middleware
 app.use(cookieParser());
 
 app.use(
-  cors({
-    origin: [process.env.CLIENT_URL],
+    cors({
+    origin: 'https://dazzling-biscuit-956557.netlify.app',
     credentials: true,
     optionsSuccessStatus: 204,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  })
+  }) 
 );
 
 app.use("/api/auth", authRouter);
