@@ -12,7 +12,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-    origin: 'https://dazzling-biscuit-956557.netlify.app',
+    origin:[process.env.CLIENT_URL],
     credentials: true,
     optionsSuccessStatus: 204,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
